@@ -2,8 +2,8 @@
   <section id="home" class="hero" :style="heroStyle" aria-label="Intro">
     <div class="hero-overlay">
       <div class="container hero-content">
-        <h1>Reliable, neutral, and secure IT services</h1>
-        <p class="subtitle">Managed IT support, access control, network installs, and security — designed for modern businesses.</p>
+        <h1>Security-focused solutions for residential and small business</h1>
+        <p class="subtitle">Managed IT services, Security solutions, access control, network installs — designed for modern homes and businesses.</p>
         <div class="cta-row">
           <button class="primary" @click="scrollTo('#services')">See Support Plans</button>
           <button class="ghost" @click="$emit('go-quote')" @click.native="goQuote">Request a Quote</button>
@@ -22,7 +22,7 @@ import { computed } from 'vue'
 */
 const heroStyle = computed(() => ({
   // Example: replace with `backgroundImage: 'url(/assets/your-image.jpg)'
-  backgroundImage: 'linear-gradient(180deg, rgba(245,245,246,0.6), rgba(240,240,242,0.8))',
+  backgroundImage: 'url(public/3306588.jpg)',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
 }))

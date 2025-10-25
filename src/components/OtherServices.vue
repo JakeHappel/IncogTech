@@ -1,12 +1,12 @@
 <template>
   <section id="other-services" class="section alt-bg">
     <div class="container">
-      <h2 class="section-title">Other Services</h2>
-      <p class="lead">Additional expertise to round out your infrastructure</p>
+      <h2 class="section-title">Our Services</h2>
+      <p class="lead">Expertise to round out your infrastructure</p>
 
       <div class="grid services-grid">
         <article class="service-card">
-          <h4>Access & Physical Security</h4>
+          <h4>Security Solutions</h4>
           <p>Card readers, multi-factor entry systems, CCTV integration, and managed access policies.</p>
         </article>
 

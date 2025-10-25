@@ -3,7 +3,7 @@
     <div class="container nav-inner">
       <div class="brand">
         <!-- Replace the text with an <img> when you have a logo -->
-        <div class="logo-placeholder" aria-hidden="true">LOGO</div>
+        <img class="logo" src="/public/Logo-removebg.png" alt="">
       </div>
 
       <nav :class="['main-nav', { open: mobileOpen }]" aria-label="Primary">
@@ -56,13 +56,11 @@ function scrollTo(hash) {
 .brand {
   flex: 0 0 auto;
 }
-.logo-placeholder {
-  font-weight: 700;
-  color: #343434;
-  background: #f2f2f2;
-  border-radius: 6px;
-  padding: 8px 12px;
-  letter-spacing: 1px;
+.logo {
+  max-width: 100%;
+  width: 10vh;
+  height: auto;    
+  display: block; 
 }
 .main-nav {
   display: flex;

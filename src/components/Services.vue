@@ -7,7 +7,7 @@
       <div class="tiers">
         <article class="card tier">
           <h3>Basic</h3>
-          <p class="price">$99 / mo</p>
+          <p class="price"></p>
           <ul>
             <li>Remote support (business hours)</li>
             <li>Monthly checkups</li>
@@ -18,7 +18,7 @@
 
         <article class="card tier featured">
           <h3>Standard</h3>
-          <p class="price">$249 / mo</p>
+          <p class="price"></p>
           <ul>
             <li>24/7 remote support</li>
             <li>On-site visits (as needed)</li>
@@ -29,7 +29,7 @@
 
         <article class="card tier">
           <h3>Premium</h3>
-          <p class="price">$499 / mo</p>
+          <p class="price"></p>
           <ul>
             <li>Dedicated engineer</li>
             <li>Network & infrastructure management</li>
