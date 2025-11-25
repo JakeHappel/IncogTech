@@ -1,12 +1,12 @@
 <template>
-  <section id="home" class="hero" :style="heroStyle" aria-label="Intro">
+  <section id="home" class="hero" aria-label="Intro">
     <div class="hero-overlay">
       <div class="container hero-content">
-        <h1>Security-focused solutions for residential and small business</h1>
-        <p class="subtitle">Managed IT services, Security solutions, access control, network installs — designed for modern homes and businesses.</p>
+        <h1>Reliable, neutral, and secure IT services</h1>
+        <p class="subtitle">Managed IT support, access control, network installs, and security — designed for modern businesses.</p>
         <div class="cta-row">
           <button class="primary" @click="scrollTo('#services')">See Support Plans</button>
-          <button class="ghost" @click="$emit('go-quote')" @click.native="goQuote">Request a Quote</button>
+          <button class="ghost" @click="goQuote">Request a Quote</button>
         </div>
       </div>
     </div>
@@ -14,18 +14,13 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+/* No background logic here — the site background is provided by CSS (fixed layer).
+   Keep the hero as a transparent/content container that sits above the fixed background. */
 
-/*
-  You can replace the background by setting a CSS variable --hero-bg in global stylesheet or
-  add inline style here. For now this component exposes a placeholder background with a soft gradient.
-*/
-const heroStyle = computed(() => ({
-  // Example: replace with `backgroundImage: 'url(/assets/your-image.jpg)'
-  backgroundImage: 'url(public/3306588.jpg)',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center center',
-}))
+function scrollTo(hash) {
+  const el = document.querySelector(hash)
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 function goQuote() {
   const el = document.getElementById('request-quote')
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -39,11 +34,17 @@ function goQuote() {
   align-items: center;
   position: relative;
   color: #1f1f1f;
+  /* transparent so the fixed background shows through */
+  background: transparent;
 }
+
+/* Overlay keeps text readable while still revealing the background */
 .hero-overlay {
   width: 100%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.85) 65%);
+  /* slightly more translucent than before so the fixed image shows through */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.72) 70%);
 }
+
 .hero-content {
   padding: 4rem 1rem;
   max-width: 1100px;
@@ -77,7 +78,7 @@ function goQuote() {
   cursor: pointer;
 }
 @media (max-width: 720px) {
-  .hero-content { padding: 3rem 1rem;}
+  .hero-content { padding: 3rem 1rem; }
   .cta-row { flex-direction: column; align-items: stretch; }
 }
 </style>

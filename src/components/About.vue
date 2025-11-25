@@ -12,7 +12,7 @@
       </div>
       <div class="about-image" aria-hidden="true">
         <!-- placeholder for image -->
-        <div class="img-placeholder">Team / Office Image</div>
+        
       </div>
     </div>
   </section>
@@ -22,13 +22,18 @@
 </script>
 
 <style scoped>
+
+.section {
+  padding: 2rem;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 1.25rem;
   align-items: center;
 }
-.about-text p { color: #555; }
+.about-text p { color: #555; padding:0.3rem}
 .img-placeholder {
   height: 220px;
   background: linear-gradient(180deg,#f6f6f7,#efeff0);

@@ -33,6 +33,10 @@
 </script>
 
 <style scoped>
+
+#other-services {
+  padding: 3rem;
+}
 .alt-bg { background: #fbfbfc; }
 .services-grid {
   display: grid;

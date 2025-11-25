@@ -3,8 +3,8 @@
     <div class="container">
       <h2>Request a Quote</h2>
       <p class="lead">Tell us a bit about your needs and we'll get back to you within one business day.</p>
-
-      <form class="quote-form" @submit.prevent="submit">
+      
+      <form class="quote-form" action="https://formsubmit.co/Jake@IncogTech.com" method="POST" @submit.prevent="submit">
         <div class="form-grid">
           <label>
             Full name
@@ -88,6 +88,10 @@ function clear(reset = true) {
 </script>
 
 <style scoped>
+
+#request-quote{
+  padding:2.5rem
+}
 .quote-section { background: #fff; padding-bottom: 3rem; }
 .quote-form { margin-top: 1rem; display: block; }
 .form-grid {

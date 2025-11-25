@@ -1,9 +1,32 @@
 :root{
-  --bg: #f8f8f9;
-  --card: #ffffff;
+ 
   --muted: #6b6b6b;
   --accent: #2b2f34;
   --container-width: 1100px;
+
+  /* Set your fixed page background here. You can replace the URL with your image path
+     (e.g. '/src/assets/hero-bg.jpg' or an external URL). The second layer is a subtle
+     color fallback for when the image is missing. */
+  --site-bg-image: url('/public/3306588.jpg');
+  --site-bg-fallback: linear-gradient(180deg,#eef0f2,#f8f8f9);
+  --site-bg-opacity: 1;
+}
+
+/* Background layer that stays fixed while content scrolls above it */
+html::before,
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -9999; /* behind everything */
+  background-image: var(--site-bg-image), var(--site-bg-fallback);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: var(--site-bg-opacity);
+  pointer-events: none; /* allow clicks through to content */
+  will-change: transform;
 }
 
 /* Reset-ish */
